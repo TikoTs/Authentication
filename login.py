@@ -5,17 +5,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
+
+class UiMainWindow(object):
+    def setup_ui(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1187, 843)
         MainWindow.setStyleSheet("QMainWindow{\n"
-        "    background: white;\n"
-        "}")
+                                 "    background: white;\n"
+                                 "}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("QWidget{\n"
-        "    background: white;\n"
-        "}")
+                                         "    background: white;\n"
+                                         "}")
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -35,16 +36,16 @@ class Ui_MainWindow(object):
         self.email_line = QtWidgets.QLineEdit(self.widget)
         self.email_line.setMaximumSize(QtCore.QSize(250, 35))
         self.email_line.setStyleSheet("QLineEdit{\n"
-        "    font: 10pt \"MS Shell Dlg 2\";\n"
-        "    color: rgba(60, 70, 190, 0.8);\n"
-        "    outline: none;\n"
-        "    border: none;\n"
-        "    border-bottom: 1px solid rgb(192,192,168);\n"
-        "    background-color:  rgba(192,192,168,0.2);\n"
-        "    padding-bottom: 3;\n"
-        "    border-radius: 2\n"
-        "}\n"
-        "")
+                                      "    font: 10pt \"MS Shell Dlg 2\";\n"
+                                      "    color: rgba(60, 70, 190, 0.8);\n"
+                                      "    outline: none;\n"
+                                      "    border: none;\n"
+                                      "    border-bottom: 1px solid rgb(192,192,168);\n"
+                                      "    background-color:  rgba(192,192,168,0.2);\n"
+                                      "    padding-bottom: 3;\n"
+                                      "    border-radius: 2\n"
+                                      "}\n"
+                                      "")
         self.email_line.setText("")
         self.email_line.setObjectName("email_line")
         self.verticalLayout_3.addWidget(self.email_line)
@@ -52,16 +53,16 @@ class Ui_MainWindow(object):
         self.password_line = QtWidgets.QLineEdit(self.widget)
         self.password_line.setMaximumSize(QtCore.QSize(250, 35))
         self.password_line.setStyleSheet("QLineEdit{\n"
-        "    font: 10pt \"MS Shell Dlg 2\";\n"
-        "    color: rgba(60, 70, 190, 0.8);\n"
-        "    outline: none;\n"
-        "    border: none;\n"
-        "    border-bottom: 1px solid rgb(192,192,168);\n"
-        "    background-color:  rgba(192,192,168,0.2);\n"
-        "    padding-bottom: 3;\n"
-        "    border-radius: 2\n"
-        "}\n"
-        "")
+                                         "    font: 10pt \"MS Shell Dlg 2\";\n"
+                                         "    color: rgba(60, 70, 190, 0.8);\n"
+                                         "    outline: none;\n"
+                                         "    border: none;\n"
+                                         "    border-bottom: 1px solid rgb(192,192,168);\n"
+                                         "    background-color:  rgba(192,192,168,0.2);\n"
+                                         "    padding-bottom: 3;\n"
+                                         "    border-radius: 2\n"
+                                         "}\n"
+                                         "")
         self.password_line.setText("")
         self.password_line.setObjectName("password_line")
         self.password_line.setObjectName("password")
@@ -71,28 +72,28 @@ class Ui_MainWindow(object):
         self.message_label = QtWidgets.QLabel(self.widget)
         self.message_label.setMaximumSize(QtCore.QSize(250, 35))
         self.message_label.setStyleSheet("QLabel{font: 10pt \"Rockwell\";\n"
-        "    color: rgb(190,40,21)\n"
-        "}")
+                                         "    color: rgb(190,40,21)\n"
+                                         "}")
         self.message_label.setObjectName("message_label")
         self.verticalLayout_3.addWidget(self.message_label)
         self.LogInButton = QtWidgets.QPushButton(self.widget)
         self.LogInButton.setMinimumSize(QtCore.QSize(150, 35))
         self.LogInButton.setMaximumSize(QtCore.QSize(200, 16777215))
         self.LogInButton.setStyleSheet("QPushButton{\n"
-        "    font: 10pt \"Rockwell\";\n"
-        "    color: #fff;\n"
-        "    border: none;\n"
-        "    border-radius: 6;\n"
-        "    background: rgba(60, 70, 190, 0.8);\n"
-        "    cursor: pointer;\n"
-        "}\n"
-        "QPushButton:hover{\n"
-        "    oppacity: 0.7;\n"
-        "}")
+                                       "    font: 10pt \"Rockwell\";\n"
+                                       "    color: #fff;\n"
+                                       "    border: none;\n"
+                                       "    border-radius: 6;\n"
+                                       "    background: rgba(60, 70, 190, 0.8);\n"
+                                       "    cursor: pointer;\n"
+                                       "}\n"
+                                       "QPushButton:hover{\n"
+                                       "    oppacity: 0.7;\n"
+                                       "}")
         self.LogInButton.setObjectName("LogInButton")
         self.LogInButton.clicked.connect(self.authorization)
         self.verticalLayout_3.addWidget(self.LogInButton, 0, QtCore.Qt.AlignHCenter)
-        self.verticalLayout_2.addWidget(self.widget, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.verticalLayout_2.addWidget(self.widget, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
         self.stackedWidget.addWidget(self.login_page)
         self.home_page = QtWidgets.QWidget()
         self.home_page.setObjectName("home_page")
@@ -102,9 +103,9 @@ class Ui_MainWindow(object):
         self.label.setMinimumSize(QtCore.QSize(200, 200))
         self.label.setMaximumSize(QtCore.QSize(200, 200))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../../Downloads/spongebob (1).png"))
+        self.label.setPixmap(QtGui.QPixmap("media/spongebob.png"))
         self.label.setObjectName("label")
-        self.horizontalLayout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.horizontalLayout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
         self.stackedWidget.addWidget(self.home_page)
         self.verticalLayout.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -116,22 +117,23 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
+        self.retranslate_ui(MainWindow)
         self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, MainWindow):
+    def retranslate_ui(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.message_label.setText(_translate("MainWindow", ""))
         self.LogInButton.setText(_translate("MainWindow", "Log In"))
+
     def authorization(self):
         entered_email = self.email_line.text()
         entered_password = hashlib.sha256(self.password_line.text().encode('utf-8')).hexdigest()
         if entered_email == '' or self.password_line.text() == '':
             self.message_label.setText("Enter All Fields")
-        elif entered_email == os.getenv("EMAIL1") and entered_password == os.getenv("PASSWORD1")\
-            or entered_email == os.getenv("EMAIL2") and entered_password == os.getenv("PASSWORD2"):
+        elif entered_email == os.getenv("EMAIL1") and entered_password == os.getenv("PASSWORD1") \
+                or entered_email == os.getenv("EMAIL2") and entered_password == os.getenv("PASSWORD2"):
             self.stackedWidget.setCurrentIndex(1)
         elif entered_email == os.getenv("EMAIL1") and entered_password != os.getenv("PASSWORD1"):
             self.message_label.setText("Incorrect Password")
@@ -141,13 +143,12 @@ class Ui_MainWindow(object):
             self.message_label.setText("The Email Does Not Exist")
 
 
-
-
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
+    ui = UiMainWindow()
+    ui.setup_ui(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
